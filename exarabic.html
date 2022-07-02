@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>
+
+ exame_arabic
+        </title>
+        <style>
+            div{
+                margin-left: 15px;
+               display: inline-block;
+               margin-top: -20px;
+
+            }
+            p{
+                float: left;
+            }
+            .a{
+                width: 130px;
+                height: 130px;
+
+            }
+           
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ; font-weight:bold;font-size: larger; margin-left: 20px; text-align: right;">
+   
+   <div><br><br>......الكلمة التي تبدأ بحرف الألف<br><br><br></div> <div id="pa"></div> <br><br>
+    <input type="radio" id="Ra" name="RadioSet" value="e"> <img src="ima/ر.png" class="a">  &nbsp;&nbsp
+    <input type="radio" id="Ra0" name="RadioSet" value="a" />  <img src="ima/ا.png" class="a"> &nbsp;&nbsp
+    <input type="radio" id="Ra1" name="RadioSet"value="c" /><img src="ima/خ.png" class="a"><br/><br> 
+
+    <div><br><br> ..... الكلمة التي تبدأ بحرف الباء<br><br><br></div> <div id="pa1" ></div><br><br>
+    <input type="radio"  name="Radi" value="o"> <img src="ima/ب.png" class="a"> &nbsp;&nbsp
+    <input type="radio"  name="Radi" value="f" /> <img src="ima/ق.jpg" class="a"> &nbsp;&nbsp
+    <input type="radio"  name="Radi"value="c" /><img src="ima/ط.jpg" class="a"><br/><br> 
+    
+   <div><br><br>..... الكلمة التي تبدأ بحرف التاء<br><br><br></div><div id="pa2"></div> <br><br>
+     <input type="radio" id="Ra1" name="RadioSet1" value="e"> <img src="ima/ظ.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra01" name="RadioSet1" value="a" /> <img src="ima/ض.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra11" name="RadioSet1"value="s" /><img src="ima/ت.png"class="a"><br/><br> 
+     
+     <div><br><br> ..... الكلمة التي تبدأ بحرف الثاء<br><br><br></div><div id="pa3"></div> <br><br>
+     <input type="radio"  name="rad1" value="o"> <img src="ima/ط.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad1" value="e" /> <img src="ima/ث.png" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad1"value="c" /><img src="ima/ل.jpg" class="a"><br/><br> 
+
+    <div><br><br>..... الكلمة التي تبدأ بحرف الخاء<br><br><br></div><div id="pa4"></div> <br><br>
+     <input type="radio" id="Ra12" name="RadioSet2" value="l"> <img src="ima/ف.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra012" name="RadioSet2" value="a" /> <img src="ima/ه.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra112" name="RadioSet2"value="c" /><img src="ima/خ.png" class="a"><br/><br> 
+     
+    
+     <div><br><br> .......... الكلمة التي تبدأ بحرف الدال<br><br><br></div><div id="pa5"></div> <br><br>
+     <input type="radio"  name="rad11" value="o"> <img src="ima/د.png" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad11" value="e" /> <img src="ima/س.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad11"value="b" /><img src="ima/ل.jpg" class="a"><br/><br> 
+    
+
+    <div><br><br>.........الكلمة التي تبدأ بحرف السين<br><br><br></div><div id="pa6"></div> <br><br>
+     <input type="radio" id="Ra14" name="RadioSet10" value="e"> <img src="ima/س.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra015" name="RadioSet10" value="a" /> <img src="ima/ظ.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio" id="Ra115" name="RadioSet10"value="s" /><img src="ima/ع.jpg" class="a"><br/><br> 
+     
+     <div><br><br>.........الكلمة التي تبدأ بحرف الصاد<br><br><br></div><div id="pa7"></div> <br><br>
+     <input type="radio"  name="rad1t" value="o"> <img src="ima/ه.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad1t" value="i" /> <img src="ima/ص.jpg" class="a"> &nbsp;&nbsp
+     <input type="radio"  name="rad1t"value="c" /><img src="ima/ا.png" class="a"><br/><br> 
+     
+         <input  type="button" onclick="sum()" value="reselt"> &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value = "Refresh" onclick="history.go(0);"><br><br>
+         <div id="ddv"></div>
+         <p > <a href=""><img src="ima/up.PNG" width="50px" height="50px" title="up to page"></a></p> &nbsp;&nbsp;
+         &nbsp;&nbsp;<p style="float: right;"> <img src="ima/left.png" width="50px" height="50px" onclick="history.back();" title="back to home page"></p>
+
+
+    <script>
+        var coun=0;
+        var n1=document.getElementsByName("RadioSet");
+        var n2=document.getElementsByName("Radi");
+        var n3=document.getElementsByName("RadioSet1");
+        var n4=document.getElementsByName("rad1"); 
+        var n5=document.getElementsByName("RadioSet2");
+        var n6=document.getElementsByName("rad11");
+        var n7=document.getElementsByName("RadioSet10");
+        var n8=document.getElementsByName("rad1t");
+        function sum(){
+        
+        if(n1[1].checked==true ){
+            coun++;
+            
+        }
+        else
+        {
+           document.getElementById("pa").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+
+        if(n2[0].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa1").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+        if(n3[2].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa2").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+
+        if(n4[1].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa3").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+        if(n5[2].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa4").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+
+        if(n6[0].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa5").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+        if(n7[0].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa6").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+
+        if(n8[1].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa7").innerHTML="<img src='ima/notvalid.png' width=30px height=30px>";
+        }
+        if(coun<4)
+        {
+            document.getElementById("ddv").textContent="حظ سعيد درجتك هى : "+coun;
+        }else if(coun<6)
+        {
+            
+            document.getElementById("ddv").textContent="جيد جدا درجتك هى: "+coun;
+        }else{
+            
+            
+            document.getElementById("ddv").textContent="ممتاز درجتك هى : "+coun;
+
+        }
+        //alert(coun);
+      //  document.write("secd",coun);
+    }
+    </script>
+</body>
+
+</html>

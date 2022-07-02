@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+   profile
+
+        </title>
+        <style>
+            h1{
+                font-family:"lucida calligraphy",cursive;   
+            }
+            dd{
+                margin-left:150px ;
+                color: dimgray;
+            }
+            dl{
+                color: darkslategrey;
+                
+            }
+            #div1{
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc;">
+    <br>
+   <center><h1><b>YOUR profile</b> </h1></center> 
+    <div id="div1">
+    </div>
+    <dl><h2>YOUR Name:</h2></dl>
+    <dd id="d1"><h3></h3> </dd>
+    <dl><h2>YOUR Age:</h2></dl>
+    <dd id="d2"><h3></h3> </dd>
+    <dl><h2>YOUR Phone  :</h2></dl>
+    <dd id="d3"><h3></h3> </dd>
+    <dl><h2>YOUR Email:</h2></dl>
+    <dd id="d4"><h3></h3> </dd>
+    <dl><h2>YOUR Password:</h2></dl>
+    <dd id="d5"><h3></h3> </dd>
+    <dl><h2>YOUR Gender:</h2></dl>
+    <dd id="d6"><h3></h3> </dd>
+<br>
+<input type="button" value="remove" onclick="rem()"><br><br>
+<div id="div"> <a href="home.html" title="pack to home"><img src="ima/left.png" width="50px" height="50px"></a></div>
+ 
+
+
+
+    <script>
+        document.getElementById("d1").textContent=localStorage.name;
+        document.getElementById("d2").textContent=localStorage.age;
+        document.getElementById("d3").textContent=localStorage.pone;
+        document.getElementById("d4").textContent=localStorage.mail;
+        document.getElementById("d5").textContent=localStorage.password;
+        document.getElementById("d6").textContent=localStorage.gender;
+        var s=localStorage.photo.split("\\");
+       // alert(s[2]);
+        document.getElementById("div1").innerHTML="<img src=ima/"+s[2]+" width=60px height=60px >";
+      // document.getElementById("div1").textContent=localStorage.photo;
+       
+        function rem(){
+            localStorage.removeItem("name");
+	localStorage.removeItem("age");
+    localStorage.removeItem("pone");
+	localStorage.removeItem("mail");
+    localStorage.removeItem("password");
+	localStorage.removeItem("gender");
+    localStorage.removeItem("photo");
+   document.getElementById("d1").textContent="";
+        document.getElementById("d2").textContent="";
+        document.getElementById("d3").textContent="";
+        document.getElementById("d4").textContent="";
+        document.getElementById("d5").textContent="";
+        document.getElementById("d6").textContent="";
+        document.getElementById("div1").textContent="";
+       
+
+        }
+
+    </script>
+</body>
+
+</html>

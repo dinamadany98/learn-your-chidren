@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	
+    <style>
+          *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(191, 201, 195, 0.938);
+}
+body{
+	height: 100vh;
+	width: 100%;
+}
+.all{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+.box{
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(2, 1FR);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+.left{
+	background: url("voic/pppp.jpeg") no-repeat center;
+	background-size:500px 600px;
+	height: 100%;
+
+}
+
+.right{
+	padding: 25px 40px;
+    background-color:rgb(212, 219, 219);
+    border-radius: 10px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5PX 1PX;
+	font-size: 25PX;
+	margin-bottom: 22px;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.bt{
+	width: 100%;
+	background-color: #249bfc9d;
+    border-radius: 20PX;
+    font-family: fantasy;
+    height: 50PX;
+	color: #fff;
+	font-size: 20PX;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.bt:hover{
+    background-color: #e64b0e;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+#su{
+            text-align:center;
+            border-radius:8px; 
+			width: 60px;
+			height: 40px;
+         } 
+    </style>
+</head>
+<body>
+   
+	<div class="all">
+		<div class="box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact With Us</h2>
+                 
+				<form method="get" action="thank.html">
+					<input type="text" class="field" name="name" placeholder="Your Full Name">
+				<input type="email" class="field" name="email" placeholder="Your Email">
+				<textarea placeholder="Your Message" class="field" name="textare"></textarea>
+					
+					<input type="submit" value="log in" id="su"><br><br>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

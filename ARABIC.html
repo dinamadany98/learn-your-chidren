@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+
+ENGLISH 
+        </title>
+        <style>
+            .div2 {
+             display: inline;
+                float: left;
+                margin-top: 100px;
+                margin-left: 80px;
+               
+                width: 22%;
+                
+                background-color:rosybrown;
+            }
+            #div1{
+                position: fixed;
+                width: 100%;
+                color: brown;
+
+            }
+            h1{
+            text-align: center; 
+             color:olivedrab;
+             font-family:"lucida calligraphy",cursive;
+         
+            }
+            .d{
+                padding-top: -100px;
+
+            }
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ;" onload="clo(this)">
+    <div id="div1"><b> <h1>تعلم اللغه العربيه </h1></b></div> <br><br> <br>
+    <div class="div2"  onclick="op1()")>
+        <img src="ima/a4.jpg" width=277px height=200px  onmouseover="ovr(this)" onmouseout="dow(this)"> <br><br>
+       <h1 style="color: black;"> تعلم الحروف الهجائيه </h1> 
+    </div>
+<div class="div2 d" >
+    <embed src="ima/arabic.mp4" width=277px height=210px controls > <br>
+        <h1 style="color: black;"> فديو ترفيهى  </h1>  <br>
+</div>
+<div class="div2"  onclick="op2()")>
+    <img src="ima/a1.jpg" width=277px height=200px onmouseover="ovr(this)" onmouseout="dow(this)"> <br><br>
+   <h1 style="color: black;">سؤال و جواب </h1><br> 
+</div>
+<br clear=left><br><br>
+    <div id="div"  > <img src="ima/left.png" width="50px" height="50px" onclick="history.back()" title="back to home page"></div>
+ 
+<script>
+    var win;
+    var win2;
+    function op1(){
+
+        win=window.open('arabiclearn.html','_self');
+    
+    }
+    function op2(){
+        win2=window.open('exarabic.html','_self');
+    }
+    function clo(){
+        if(win.closed==false ||win2.closed==false){
+        win.close();
+        win2.close();
+        }
+    }
+function ovr(d){
+    d.style.opacity=.3;
+    //window.open("exenglish.html");
+}
+function dow(d){
+    d.style.opacity=1;
+}
+</script>
+</body> 
+</html>

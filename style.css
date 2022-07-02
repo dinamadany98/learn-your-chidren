@@ -1,0 +1,24 @@
+#game{
+
+    width: 480px;  
+    background: #eee;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+div{
+    
+    float: left;
+    background-image: url(voic/imgg3.jpg);
+    background-size:180px;
+    margin: 8px;
+    cursor: pointer;
+}
+img{
+    width: 140px;
+    height: 150px;
+    opacity: 0;
+}
+
+
+   

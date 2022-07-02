@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <style>
+      #d{
+           background-image: url("ima/LL.jpg");
+           width: 100% ;
+           height: 100% ;
+           
+       }
+   </style>
+    </head>
+    <body>
+        <div id="d"><br><br><br><br><h2 id="d2" style="margin-left: 290px;"></h2> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br></div>
+     
+
+        <script>
+		
+            var d=new Date();
+     
+            var t;
+           
+         function sho(){
+          
+       document.getElementById("d2").innerText=d.toUTCString();
+            d=new Date(); 
+        //var x=d.getSeconds();
+        //x++;
+       
+         }
+         function tim(){
+         t=setInterval(sho,1000);
+       
+         }
+         tim();
+        // document.getElementById("t").onclick=tim;
+       function st(e){
+       if(e.key=="q"){
+           
+           clearInterval(t);
+           alert("clock stop");
+       
+       }
+       
+       
+       }
+
+			
+        </script>
+    </body>
+</html>

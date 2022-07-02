@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>
+
+       math test
+        </title>
+        
+        <style>
+            body{
+
+                background-image: url(kk.jpg) ;
+                background-size: contain;
+            
+                opacity: 3;
+            }
+            div{
+                margin-left: 15px;
+               display: inline-block;
+               margin-top: -20px;
+               font-size: 30px;
+               font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               font-weight: 500;
+
+            }
+            p{
+                float: right;
+            }
+            
+            input[type='radio'] {
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin-left: 20px;
+                padding-left: 30px;
+            }
+            span {
+                color: brown;
+            }
+           
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ; font-weight:bold;font-size: larger; margin-left: 20px; text-align: right;">
+  
+    
+    <div><br><br><img src="ima/2222.PNG"> <span > + </span>   <img src="ima/333.PNG" width="200px"> <br></div> <div id="pa1"></div><br><br>
+    <input type="radio"  name="Radi" value="o"> 5 &nbsp;&nbsp
+    <input type="radio"  name="Radi" value="f" /> 6 &nbsp;&nbsp
+    <input type="radio"  name="Radi"value="c" /> 3 <br> <br> 
+<hr>
+   <div><br><br> <img src="ima/111.PNG"> <span > + </span>   <img src="ima/111.PNG">  <br></div> <div id="pa"></div> <br><br>
+    <input type="radio" id="Ra" name="RadioSet" value="e">3  &nbsp;&nbsp
+    <input type="radio" id="Ra0" name="RadioSet" value="a"/>2   &nbsp;&nbsp
+    <input type="radio" id="Ra1" name="RadioSet"value="c"/> 4 <br/><br> 
+   
+
+  
+    <hr>
+   <div><br><br> <img src="ima/3333.PNG" height="150px"> <span > - </span>   <img src="ima/121.PNG" height="150px"><br></div><div id="pa2"></div> <br><br>
+     <input type="radio" id="Ra1" name="RadioSet1" value="e">  5 &nbsp;&nbsp
+     <input type="radio" id="Ra01" name="RadioSet1" value="a" /> 2 &nbsp;&nbsp
+     <input type="radio" id="Ra11" name="RadioSet1"value="s" />10<br/><br> 
+     <hr>
+     <div><br><br> <img src="ima/555.PNG" height="150px"> <span > + </span>   <img src="ima/4444.PNG" height="150px"> <br></div><div id="pa3"></div> <br><br>
+     <input type="radio"  name="rad1" value="o"> 4 &nbsp;&nbsp
+     <input type="radio"  name="rad1" value="e" />9 &nbsp;&nbsp
+     <input type="radio"  name="rad1"value="c" />2<br/><br> 
+     <hr>
+    <div><br><br><img src="ima/55.PNG" height="150px"> <span > + </span>   <img src="ima/33.PNG" height="150px" width="200px"><br></div><div id="pa4"></div> <br><br>
+     <input type="radio" id="Ra12" name="RadioSet2" value="l">4 &nbsp;&nbsp
+     <input type="radio" id="Ra012" name="RadioSet2" value="a" /> 7 &nbsp;&nbsp
+     <input type="radio" id="Ra112" name="RadioSet2"value="c" />8<br/><br> 
+     
+    <hr>
+     <div><br><br> <img src="ima/88.PNG" height="150px"> <span > - </span>   <img src="ima/44.PNG" height="150px" width="200px"><br></div><div id="pa5"></div> <br><br>
+     <input type="radio"  name="rad11" value="o">4 &nbsp;&nbsp
+     <input type="radio"  name="rad11" value="e" />5 &nbsp;&nbsp
+     <input type="radio"  name="rad11"value="b" />9<br/><br> 
+    <hr>
+
+    <div><br><br> <img src="ima/44.PNG" height="150px" width="220px"> <span > + </span>   <img src="ima/333.PNG" height="150px" width="200px"><br></div><div id="pa6"></div> <br><br>
+     <input type="radio" id="Ra14" name="RadioSet10" value="e"> 2 &nbsp;&nbsp
+     <input type="radio" id="Ra015" name="RadioSet10" value="a" /> 7 &nbsp;&nbsp
+     <input type="radio" id="Ra115" name="RadioSet10"value="s" />6<br/><br> 
+     <hr>
+     <div><br><br> <img src="ima/33.PNG" height="150px" width="200px"> <span > + </span>   <img src="ima/222.PNG" height="150px" width="200px"><br></div><div id="pa7"></div> <br><br>
+     <input type="radio"  name="rad1t" value="o"> 6 &nbsp;&nbsp
+     <input type="radio"  name="rad1t" value="i" />  4 &nbsp;&nbsp
+     <input type="radio"  name="rad1t"value="c" />5<br/><br> 
+     <hr>
+         <input  type="button" onclick="sum()" value="reselt">&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value = "Refresh" onclick="history.go(0);"> <br><br>
+         <div id="ddv"></div>
+
+         <p > <a href=""><img src="ima/up.PNG" width="50px" height="50px" title="up to page"></a></p> &nbsp;&nbsp;
+         &nbsp;&nbsp;<p style="float: left;"> <img src="ima/left.png" width="50px" height="50px" onclick="history.back();" title="back to home page"></p>
+
+
+    <script>
+        var coun=0;
+        var n1=document.getElementsByName("RadioSet");
+        var n2=document.getElementsByName("Radi");
+        var n3=document.getElementsByName("RadioSet1");
+        var n4=document.getElementsByName("rad1"); 
+        var n5=document.getElementsByName("RadioSet2");
+        var n6=document.getElementsByName("rad11");
+        var n7=document.getElementsByName("RadioSet10");
+        var n8=document.getElementsByName("rad1t");
+        function sum(){
+        
+        if(n1[1].checked==true ){
+            coun++;
+            
+        }
+        else
+        {
+           document.getElementById("pa").innerHTML="<img src='notvalid.png' width='50px' height='100px'; >";
+        }
+
+        if(n2[0].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa1").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+        if(n3[1].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa2").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+
+        if(n4[1].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa3").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+        if(n5[2].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa4").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+
+        if(n6[0].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa5").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+        if(n7[1].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa6").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+
+        if(n8[2].checked==true ){
+            coun++;
+            
+        }else
+        {
+           document.getElementById("pa7").innerHTML="<img src='notvalid.png' width=30px height=30px>";
+        }
+        if(coun<4)
+        {
+            document.getElementById("ddv").textContent="Game Over Your Grade Is "+coun;
+        }else if(coun<6)
+        {
+            
+            document.getElementById("ddv").textContent="Very Good Your Grade Is "+coun;
+        }else{
+            
+            
+            document.getElementById("ddv").textContent="Excellent Your Grade Is "+coun;
+
+        }
+    }
+
+            
+    </script>
+</body>
+
+</html>

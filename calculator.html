@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+
+
+        </title>
+        <style>
+            input[type="button"]{
+               width: 50px;
+                border-radius:8px;
+                background-color: gainsboro;
+                text-align: center; 
+            }
+            h1{
+              
+             font-family:"lucida calligraphy",cursive;
+             color: brown;
+         } 
+           h1+div{
+                border:2px solid;
+             display: inline-block;
+             background-color:beige;
+             border-radius:8px;
+            }
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ;text-align: center;">
+   <br> <h1>Calculator</h1>
+   <div>
+    <br><br><br>&nbsp;&nbsp; <input type="text" id="tex1" placeholder="enter Expresion here"> &nbsp;&nbsp; 
+  
+    <input type="text" id="tex3" >&nbsp;&nbsp;
+    <br> <br>
+    <input type="button" id="b0" value="0" onclick="window.tex1.value +='0'">
+    <input type="button" id="b1" value="1" onclick="window.tex1.value +='1'">
+    <input type="button" id="b2" value="2" onclick="window.tex1.value +='2'">
+    <input type="button" id="b3" value="3" onclick="window.tex1.value +='3'">
+    <input type="button" id="b4" value="4" onclick="window.tex1.value +='4'"><br><br>
+    <input type="button" id="b5" value="5" onclick="window.tex1.value +='5'">
+    <input type="button" id="b6" value="6" onclick="window.tex1.value +='6'">
+    <input type="button" id="b7" value="7" onclick="window.tex1.value +='7'">
+    <input type="button" id="b8" value="8" onclick="window.tex1.value +='8'">
+    <input type="button" id="b9" value="9" onclick="window.tex1.value +='9'"><br><br>
+    <input type="button" id="b11" value="*" onclick="window.tex1.value +='*'">
+    <input type="button" id="b12" value="/" onclick="window.tex1.value +='/'">
+    <input type="button" id="b13" value="-" onclick="window.tex1.value +='-'">
+    <input type="button" id="b14" value="+" onclick="window.tex1.value +='+'">
+   <!-- <input type="button" id="b15" value="Math.cos(this)" onclick="window.tex1.value +='cos'">
+    <input type="button" id="b16" value="sin" onclick="window.tex1.value +='sin'">-->
+    <input type="button" id="b17" value="=" onclick="fun() "><br><br>
+    <input type="button" id="b18" value="clear"  onclick="cl()"><br><br><br>
+</div>
+<br><br><br>
+    <div id="div" style="float: left;"> <img src="ima/left.png" width="50px" height="50px" onclick="history.back()" title="back to home page"></div>
+ 
+    <script> 
+     var tx1=document.getElementById("tex1");
+    // var tx2=document.getElementById("tex2");
+     var tx3=document.getElementById("tex3");
+     var inpu=document.getElementsByTagName("input");
+     var b=document.getElementById("b16");
+       function cl(){
+           tx1.value="";
+           tx3.value="";
+       }
+       function fun(){
+           tx3.value=eval(tx1.value);
+       }
+    
+
+
+
+    </script>
+</body>
+
+</html>

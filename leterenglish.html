@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+  learn English
+
+        </title>
+        <style>
+ h1{
+             color:darkred;
+             font-family:"lucida calligraphy",cursive;
+             text-align: center;
+         }
+         #div{
+             float: right;
+             margin-top: 350px;
+         }
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ;">
+    <h1>Learn  Letters Of English</h1>
+    <input type="text" id="text1"  placeholder="Enter Number of leter" onfocus="this.style.backgroundColor='azure'"> &nbsp;&nbsp;
+    <input type="button" id="bot" value="Generate" onclick="gen()">&nbsp;&nbsp; <input type="button" value = "Refresh" onclick="history.go(0);">
+<br><br>
+<div id="div2"> </div> <br>
+   <div id="div3" style="display: inline; width: 200px;"> </div>
+    <div id="div"> <img src="ima/left.png" width="50px" height="50px" onclick="history.back()" title="back to home page"></div>
+    
+<script>
+//var tex=document.getElementById("text1").value;
+try{
+var div2=document.getElementById("div2");
+ch=["A","B","C","D","E","F","G","H","I","J","k","L","M","N","O","P","Q","R","S","T","u","V","W","X","Y","Z"];
+ima=["ima/1.PNG","ima/2.PNG","ima/3.PNG","ima/4.PNG","ima/5.PNG","ima/6.PNG","ima/8.PNG","ima/9.PNG","ima/10.PNG","ima/11.PNG",
+"ima/12.PNG","ima/13.PNG","ima/14.PNG","ima/16.PNG","ima/17.PNG","ima/18.PNG",
+"ima/19.PNG","ima/20.PNG","ima/21.PNG","ima/22.PNG","ima/23.PNG","ima/24.PNG","ima/25.PNG","ima/26.PNG","ima/27.PNG","ima/28.PNG"];
+var ar=["ima/a.mp3","ima/b.mp3","ima/c.mp3","ima/d.mp3","ima/e.mp3","ima/f.mp3","ima/g.mp3","ima/h.mp3","ima/i.mp3","ima/j.mp3","ima/k.mp3"
+,"ima/l.mp3","ima/m.mp3","ima/n.mp3","ima/o.mp3","ima/p.mp3","ima/q.mp3","ima/r.mp3","ima/s.mp3"
+,"ima/t.mp3","ima/u.mp3","ima/v.mp3","ima/w.mp3","ima/x.mp3","ima/y.mp3","ima/z.mp3"];     
+function randomnumber(min, max) {
+        var rand = Math.floor(Math.random() * (max - min + 1) + min);
+        return rand;
+	}
+function gen(){
+    var tex=parseInt(document.getElementById("text1").value);
+    div2.textContent="";
+//document.images[0].src="";
+for(let i=0;i<tex;i++)
+{ 
+var r=randomnumber(0, 25);
+div2.innerHTML+=("<input type=button class='s' value='"+ch[r]+"' onclick='disp("+r+")' />  ");
+}
+}
+function disp(a){
+ //document.images[0].src=ima[a];
+ document.getElementById("div3").innerHTML ="<img src='"+ima[a]+"' onclick='clic("+a+")'"+ "ondblclick='dof("+ a+")'"+" onmouseover=this.style.width='200px' onmouseout=this.style.width='150px' title='clik photo'>";
+ }
+function clic(a){
+    var oud=new Audio(ar[a]);
+    oud.play();
+
+
+}
+function dof(a){
+    var oud1=Audio(ar[a]);
+    oud1.pause();
+}
+
+}
+catch(e){
+alert(e.messag);
+}
+function oud(e){
+    alert(parseInt(e));
+
+}
+    </script>
+</body>
+
+</html>

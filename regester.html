@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>
+
+      regester
+        </title>
+        <style>
+         #su{
+            text-align:center;
+            border-radius:8px; 
+         } 
+         h1{
+             color:olivedrab;
+             font-family:"lucida calligraphy",cursive;
+         }  
+         .a{
+             margin-left: 80px;
+         }
+         b{
+             font-style: italic;
+         }
+         .di{
+                border:2px solid;
+             display: inline-block;
+             background-color:beige;
+             border-radius:8px;
+             margin-left: 30%;
+            }
+        </style>
+    </head>
+<body style="background-color:#d9e2a8cc ;">
+    <marquee><h1 > pleases Enter Your Information  </h1></marquee><br><br><br><br>
+ <div class="di"> <br><br><br> <center>
+ <form action="profil.html" action="home.html" method="get" onsubmit="che(event)">
+  <b><label for="t1">Enter Your Name :</label></b><input type="text" id="t1" tabindex="1"> <br><br>
+  <b><label for="t5">Enter Your Age :</label></b>&nbsp;<input type="text" id="t5"tabindex="3" onblur="ag(this)"><br><br>
+  <b> <label for="t6">Phone Number :</label></b>&nbsp;<input type="text" id="t6" tabindex="4" onblur="ph(this)"><span id="s"> </span> <br><br>
+  <b><label for="t2">Enter Your Email:</label></b><input type="email" id="t2" tabindex="2"><br><br>
+ <b> <label for="t3">Enter Passwrd :</label></b>&nbsp;<input type="password" id="t3"tabindex="5"><br><br>
+ <b> <label for="t4">Renter Passwrrd :</label></b><input type="password" id="t4" tabindex="6" onblur="pas(this)"><span id="s2"></span><br><br>
+  <b>Chose Your Gender: </b><input type="radio" id="Ra0" name="RadioSet" value="MAL" /> MAL &nbsp;&nbsp
+  <input type="radio" id="Ra1" name="RadioSet" value="FEMAL" />FEMAL<br/><br> 
+ <b class="a"> Chose Your Image </b><input type="file" id="fil" value="chose photo"> <br><br> 
+<center><input type="submit" id="su" title="submit your information"></center>
+
+
+
+    </form>
+</center>
+</div>
+<div id="div"> <a href="home.html" title="pack to home"><img src="ima/left.png" width="50px" height="50px"></a></div>
+    <script>
+      var file=document.getElementById("fil");
+     
+        var phon=document.getElementById("t6");
+        var pass=document.getElementById("t3"); 
+        var repass=document.getElementById("t4");
+        var gend=document.getElementsByName("RadioSet");
+        var pic=document.getElementById("fil");
+        var ma=document.getElementById(t2);
+       
+ function che(e){
+     // alert(file.value);
+    e.preventDefault();
+  //  e.target.submit();
+    localStorage.name = document.getElementById("t1").value;
+    localStorage.mail = document.getElementById("t2").value;
+    localStorage.photo= file.value;
+          if(gend[0].checked==true){
+
+	localStorage.gender = document.getElementById("Ra0").value;
+	
+          }
+          else
+          {
+          
+	localStorage.gender = document.getElementById("Ra1").value;
+	    
+          }
+    file.value="";
+    pic.value="";
+    repass.value="";      
+   gend.checked==false;
+   pass.value="";
+   phon.value="";
+  document.getElementById("t1").value="";
+  document.getElementById("t5").value="";
+  document.getElementById("t2").value="";
+	
+   
+ }
+ 
+    function pas(){
+        if(pass.value==repass.value){
+            document.getElementById("s2").textContent="";
+           
+localStorage.password =pass.value;
+
+        }else{
+            document.getElementById("s2").innerHTML="<img src='ima/notvalid.png' height=15px width=15px>";
+             pass.value="";
+             repass.value="";
+             pass.focus();
+
+        }
+    }
+    var a=document.getElementById("t5");
+    function ag(){
+    if(parseInt(a.value)<= 0){
+        a.value=" ";
+        a.focus();
+        
+    }
+    else
+    {
+        localStorage.age =a.value;
+        phon.focus();
+     
+    }
+
+    }
+    var reg = /^(010|011|012)\d{8}$/;
+    function ph(){
+        if(reg.test(phon.value)){
+            
+            localStorage.pone = document.getElementById("t6").value;
+       
+        }
+        else
+        {
+            phon.value="";
+            ma.focus();
+
+             
+
+        }
+
+    }
+
+    </script>
+</body>
+
+</html>
